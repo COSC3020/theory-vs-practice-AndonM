@@ -6,7 +6,7 @@
 
 1. In ignoring constant factors and lower order terms, an algorithm may run drastically slower than advertised. For example, consider an algorithm that runs in $O(n^2 + 1000000n)$ time. However, ignoring lower-order terms we simply get $O(n^2)$. One of these will, of course, run significantly slower than the other. However, standard runtime analysis practice will lead us to belive them as equal.
 
-2. $\Omega$ and O bounds can be only loose approximations of an algorithm's true performance. By definition, an algorithms run time scales at least as slowly as the bound given by $\Omega$ and at least as fast as the bound given by O. This can be particularly misleading with $\Omega$ bounds given that an algorithm with asymptotic complexity modeled by $\Omega(log_n)$ may actually run in $n, n^2$ or even worse time.
+2. $\Omega$ and O are only loose bounds on how an algorithm may perform. Excluding $\Theta$, bounds can be particularly misleading. (either under or overestimating an algorithms performance)
 
 3. In looking at a graph with different standard asymptotes, we see that everything from log(n) through n! appear to grow similarly with respect to the input size for small values of n. However, we see the true performance of an algortithm in play only when we look at large input sizes as that is when they will begin to diverge from one another. For an input size of 10 we will likely see roughly equal performance across the board for just about any algorithm. This can be misleading as their runtimes will quickly peel away from one another as the input size increases.
 
